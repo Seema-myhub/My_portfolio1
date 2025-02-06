@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Seema's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li> <a href="index.html"> Home</a> </li>
+            <li> <a href="about.html"> About</a> </li>
+            <li> <a href="education.html"> Education</a> </li>
+            <li> <a href="skills.html"> Skills</a> </li>
+            <li> <a href="contact.html"> Contact</a> </li>
+        </ul>
+    </nav>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle"> Dark Mode</button>
+ 
+
+
+    <section class="edu-section">
+        <h2>Educational Qualifications</h2>
+        <div class="edu-cards">
+            <div class="edu-card">
+                <h3>MCA</h3>
+                <p><strong>Institution:</strong> Bangalore University</p>
+                <p><strong>Year:</strong> Pursuing</p>
+                <p><strong>Percentage/CGPA:</strong> 7.6 (1st Semester)</p>
+            </div>
+            <div class="edu-card">
+                <h3>BCA</h3>
+                <p><strong>Institution:</strong> Maharani Cluster University</p>
+                <p><strong>Year:</strong> 2023</p>
+                <p><strong>Percentage/CGPA:</strong> 88.83%</p>
+            </div>
+            <div class="edu-card">
+                <h3>Pre-University (12th)</h3>
+                <p><strong>Institution:</strong> Sri Saraswathi Vidyanikethana PU College</p>
+                <p><strong>Year:</strong> 2020</p>
+                <p><strong>Percentage/CGPA:</strong> 82%</p>
+            </div>
+            <div class="edu-card">
+                <h3>SSLC</h3>
+                <p><strong>Institution:</strong> Government High School Gunjur</p>
+                <p><strong>Year:</strong> 2018</p>
+                <p><strong>Percentage/CGPA:</strong> 84%</p>
+            </div>
+        </div>
+    </section>
+
+   <footer>      
+            <p> &copy; 2025 Seema's Portfolio</p>
+        </footer>
+        <!-- JavaScript for Dark Mode Toggle -->
+        <script>
+const toggleButton = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+// Check for saved user preference, if any, on load of the website
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    body .classList.add('dark-mode');
+}
+
+toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            // Save the user's preference in local storage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+        </script>
+    </body>
+</html>
+
