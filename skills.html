@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Seema's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li> <a href="index.html"> Home</a> </li>
+            <li> <a href="about.html"> About</a> </li>
+            <li> <a href="education.html"> Education</a> </li>
+            <li> <a href="skills.html"> Skills</a> </li>
+            <li> <a href="contact.html"> Contact</a> </li>
+        </ul>
+    </nav>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle"> Dark Mode</button>
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-icons">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\python.jpg" alt="Python" class="skill-icon">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\c++.jpg" alt="C++" class="skill-icon">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\java.jpg" alt="Java" class="skill-icon">
+
+                </div>
+            </div>
+
+            <!-- Web Technologies -->
+            <div class="skills-category">
+                <h3>Web Technologies</h3>
+                <div class="skills-icons">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\html.jpg" alt="HTML" class="skill-icon">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\css.jpg" alt="CSS" class="skill-icon">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\javascript.jpg" alt="JavaScript" class="skill-icon">
+                </div>
+            </div>
+
+            <!-- Database Management -->
+            <div class="skills-category">
+                <h3>Database Management</h3>
+                <div class="skills-icons">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\sql.jpg" alt="SQL Server" class="skill-icon">
+                </div>
+            </div>
+
+            <!-- Frameworks & Tools -->
+            <div class="skills-category">
+                <h3>Frameworks & Tools</h3>
+                <div class="skills-icons">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\vb.jpg" alt="VB.NET" class="skill-icon">
+
+                </div>
+            </div>
+
+            <!-- Operating Systems -->
+            <div class="skills-category">
+                <h3>Operating Systems</h3>
+                <div class="skills-icons">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\windows.jpg" alt="Windows 10" class="skill-icon">
+                    <img src="C:\Users\Admin\source\repos\My_portfolio\linux.jpg" alt="Linux" class="skill-icon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; 2025 Seema's Portfolio</p>
+    </footer>
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+const toggleButton = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+// Check for saved user preference, if any, on load of the website
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    body .classList.add('dark-mode');
+}
+
+toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            // Save the user's preference in local storage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
+

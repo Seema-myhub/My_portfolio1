@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Seema's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li> <a href="index.html"> Home</a> </li>
+            <li> <a href="about.html"> About</a> </li>
+            <li> <a href="education.html"> Education</a> </li>
+            <li> <a href="skills.html"> Skills</a> </li>
+            <li> <a href="contact.html"> Contact</a> </li>
+        </ul>
+    </nav>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle"> Dark Mode</button>
+
+    <div class="about-container">
+        <div class="about-content">
+            <img src="C:\Users\Admin\source\repos\My_portfolio\seemapic.jpg" alt="Seema's Profile" class="profile-img">
+            <h1>Seema B</h1>
+            <h2>Master's in Computer Applications | Web Developer</h2>
+            <p>
+                Hello! I'm Seema , an aspiring web developer pursuing my Master's in Computer Applications at Bangalore University.
+                I'm passionate about creating engaging web experiences and continuously improving my skills in web development.
+            </p>
+            <p>
+                My goal is to become an expert web developer, and I'm dedicated to learning, building, and collaborating with the
+                tech community. Explore my portfolio to see my projects and progress!
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/Seema-myhub" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/seema-myprofile" target="_blank">LinkedIn</a>
+                <a href="mailto:seemaseemab14@gmail.com">Email</a>
+               
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p> &copy; 2025 Seema's Portfolio</p>
+    </footer>
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+const toggleButton = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+// Check for saved user preference, if any, on load of the website
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    body .classList.add('dark-mode');
+}
+
+toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            // Save the user's preference in local storage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
+
